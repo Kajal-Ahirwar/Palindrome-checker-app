@@ -1,0 +1,241 @@
+/* Reset and base */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Inter", sans-serif;
+	background: #121212;
+	color: #e0dcdc;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Container max widths for large desktop */
+.container {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 16px;
+	box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+	/* background: #1f1f1f; */
+	padding: 12px 16px;
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #333;
+}
+
+/* Logo */
+.logo {
+	font-weight: 300;
+	font-size: 1.4rem;
+	letter-spacing: 0.04em;
+	margin-left: 41.5%;
+	margin-top: 4%;
+	margin-bottom: -60px;	
+	gap: 6px;
+	color: #ece8f0;
+	user-select: none;
+	font-family: sans-serif;
+}
+
+.logo .material-icons {
+	font-size: 1.6rem;
+}
+
+/* Hamburger for mobile */
+#menu-toggle {
+	background: none;
+	border: none;
+	color: #e0dcdc;
+	font-size: 2rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+/* Mobile breadcrumb simulation */
+.breadcrumb {
+	flex: 1;
+	text-align: center;
+	font-weight: 600;
+	font-size: 1rem;
+	color: #ccc;
+	user-select: none;
+}
+
+/* Show nav on desktop */
+@media (min-width: 768px) {
+
+	#menu-toggle,
+	.breadcrumb {
+		display: none;
+	}
+
+	header {
+		padding: 16px 24px;
+	}
+}
+
+
+/* MAIN CONTENT */
+main {
+	flex: 1;
+	padding: 64px 16px 120px;
+	display: flex;
+	justify-content: center;
+}
+
+.checker-wrapper {
+	max-width: 480px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+}
+
+.title-section {
+	text-align: center;
+}
+
+.title-section p {
+	font-weight: 600;
+	font-size: 1.125rem;
+	color: #ccc;
+	user-select: none;
+	margin: 0;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin: 8px 0 0;
+	font-weight: 700;
+	color: #bb86fc;
+	user-select: none;
+}
+
+/* Input card */
+.input-card {
+	background: #f9f9f9;
+	border-radius: 16px;
+	padding: 24px 28px;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 20px 15px -10px rgba(0, 0, 0, 0.14),
+		0 10px 10px -10px rgba(20, 20, 20, 0.2);
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.input-card label {
+	flex-basis: 100%;
+	font-size: 1rem;
+	color: #3b2b2b;
+	font-weight: 500;
+	user-select: none;
+}
+
+.input-card input[type="text"] {
+	flex-grow: 1;
+	border: none;
+	border-bottom: 1px solid #555;
+	background: transparent;
+	font-size: 1rem;
+	padding: 8px 4px;
+	color: #3b2b2b;
+	font-weight: 600;
+	outline-offset: 3px;
+	transition: border-color 0.25s ease;
+	min-width: 160px;
+	border-radius: 8px;
+}
+
+.input-card input[type="text"]:focus {
+	border-color: #bb86fc;
+	outline: none;
+}
+
+.input-card button {
+	background: #9366c8;
+	border-radius: 36px;
+	padding: 12px 26px;
+	border: none;
+	color: white;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	user-select: none;
+	flex-shrink: 0;
+	transition: background-color 0.3s ease;
+	box-shadow: 0 6px 8px rgba(147, 102, 200, 0.5);
+}
+
+.input-card button:hover,
+.input-card button:focus-visible {
+	background: #7a4fac;
+	outline: none;
+}
+
+/* Result output styling */
+.result-message {
+	font-size: 1.125rem;
+	font-weight: 600;
+	padding: 12px 20px;
+	border-radius: 12px;
+	text-align: center;
+	user-select: none;
+	min-height: 48px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.result-true {
+	background: #1b5e20;
+	color: #c8facc;
+	box-shadow: 0 8px 16px #1b5e20cc;
+}
+
+.result-false {
+	background: #a62828;
+	color: #ffd7d7;
+	box-shadow: 0 8px 16px #a6282888;
+}
+
+/* Info card below input */
+.info-card {
+	background: #2e7d32;
+	border-radius: 16px;
+	padding: 24px 32px;
+	color: #dcedc8;
+	box-shadow: 0 20px 15px -10px rgba(0, 0, 0, 0.22),
+		0 10px 10px -10px rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	font-size: 1.125rem;
+	font-weight: 600;
+	user-select: none;
+}
+
+.info-card .material-icons {
+	font-size: 28px;
+	margin-top: 2px;
+	color: #ffecb3;
+	flex-shrink: 0;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Palindrome Checker - freeCodeCamp</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="container" role="banner">
+      <div class="logo" aria-label="freeCodeCamp logo and branding">
+        <span>freeCodeCamp</span>
+        <span class="material-icons" aria-hidden="true">whatshot</span>
+      </div>
+      <button
+        id="menu-toggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+      </button>
+    </header>
+    <main role="main" class="container">
+      <section class="checker-wrapper" aria-labelledby="page-title">
+        <div class="title-section">
+          <br /><br /><br />
+          <h1 id="page-title">Is it a Palindrome?</h1>
+        </div>
+        <form
+          id="palindromeForm"
+          class="input-card"
+          aria-describedby="input-instruction"
+          novalidate
+        >
+          <label for="textInput" id="input-instruction"
+            >Enter in text to check for a palindrome:</label
+          >
+          <input
+            type="text"
+            id="textInput"
+            name="textInput"
+            placeholder="Enter text..."
+            autocomplete="off"
+          />
+          <button type="submit" aria-label="Check palindrome">Check</button>
+        </form>
+        <div
+          id="resultOutput"
+          aria-live="polite"
+          role="region"
+          class="result-message"
+          aria-atomic="true"
+        ></div>
+        <article class="info-card" aria-label="Palindrome definition">
+          <span class="material-icons" aria-hidden="true">lightbulb</span>
+          <p>
+            <em>A palindrome</em> is a word or sentence that's spelled the same
+            way both forward and backward, ignoring punctuation, case, and
+            spacing.
+          </p>
+        </article>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
